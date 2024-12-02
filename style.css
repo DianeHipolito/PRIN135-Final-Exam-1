@@ -10,9 +10,10 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #2d3e50;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     font-family: 'Arial', sans-serif;
 }
+
 
 .tree {
     position: relative;
@@ -20,11 +21,11 @@ body {
 }
 
 .star {
-    font-size: 2rem;
+    font-size: 4rem;
     color: gold;
     position: relative;
     z-index: 10;
-    margin-bottom: -25px
+    margin-bottom: -35px
 }
 
 .layer {
@@ -45,7 +46,7 @@ body {
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
     border-bottom: 150px solid #28a745;
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
 .layer3 {
@@ -62,4 +63,71 @@ body {
     margin: 0 auto;
     margin-top: -20px;
     border-radius: 4px;
+}
+
+.ball{
+    border-radius: 50%;
+    height: 0.6rem;
+    width: 0.6rem;
+    position: relative;
+    z-index: 7;
+}
+
+.red{
+    background-color: #ff0000;
+    animation: gu 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.green{
+    background-color: #00ff00;
+    animation: xu 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.blue{
+    background-color: #0000ff;
+    animation: fu 5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes gu{
+    25% {
+        background-color: #0000ff;
+        opacity: 1;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}
+
+@keyframes xu{
+    25% {
+        background-color: #ff0000;
+        opacity: 1;
+    }
+    50% {
+        background-color: #0000ff;
+    }
+    100% {
+        background-color: #00ff00;
+    }
+}
+
+@keyframes fu{
+    25% {
+        background-color: #00ff00;
+        opacity: 1;
+    }
+    50% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: #0000ff;
+    }
 }
